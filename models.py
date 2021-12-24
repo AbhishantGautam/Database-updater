@@ -11,7 +11,7 @@ querystring = {"q":"30.7333,76.7794"}
 
 headers = {
     'x-rapidapi-host': "weatherapi-com.p.rapidapi.com",
-    'x-rapidapi-key': "8e0d2b46f0msh52b6b6d457df98cp18a3c1jsn9e281fa58d7e"
+    'x-rapidapi-key': "not_to_disclosed"
     }
 
 response = requests.request("GET", url, headers=headers, params=querystring)
@@ -54,7 +54,7 @@ predicted_temperature = pred_temperature['data']['pred_temp']
 # Connecting to postgres database using psycopg2
 while True:
     try:
-        conn = psycopg2.connect(host='ec2-54-158-247-97.compute-1.amazonaws.com', database='dad725bctfvgr', user='vuxxchsiudjzcq', password='19146ad6348edfd5f209c06ad460e6abae945e20d3c132bc112fa9358d2b4b6a', cursor_factory=RealDictCursor)
+        conn = psycopg2.connect(host='ec2-54-158-247-97.compute-1.amazonaws.com', database='dad725bctfvgr', user='vuxxchsiudjzcq', password='not_to_be_disclosed', cursor_factory=RealDictCursor)
         cursor = conn.cursor()
         print('database connection was successful')
         break
